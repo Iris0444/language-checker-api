@@ -2,6 +2,9 @@ services:
   - type: web
     name: language-checker-api
     env: python
+    runtime: python
+    region: oregon
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
-    plan: free
+    pythonVersion: 3.11.6
